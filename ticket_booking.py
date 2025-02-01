@@ -9,7 +9,7 @@ service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 options = Options()
-# options.add_argument("--headless")
+options.add_argument("--headless")
 
 driver.get("https://bigmovies.com.np/")
 popup = driver.find_element(By.ID, "HtmlPopUpclose")
